@@ -3,13 +3,26 @@
 ## Niket Patel
 
 ## Methods
-This project will explore various splice-aware short-read alginers as described by Martin and Wang [1]. The aligners are Blat, TopHat, GSNAP, SpliceMap,
+This project will explore various splice-aware short-read alginers as described by Martin and Wang [3]. The aligners are Blat, TopHat, GSNAP, SpliceMap,
 and MapSplice. Because we are comparing aligners, a reference-based strategy will be taken towards transcriptome assembly. 
 
-Simualted data was produced using the simulation engine BEERS (https://github.com/itmat/beers_simulator/tree/kat), which is referenced by the research done by Baruzzo et al [2]. The datasets that are being used for testing this project are here: http://bioinf.itmat.upenn.edu/BEERS/bp1/datasets.php. 
+Testing of this project involved usage of the Aiptasia pallida reads in the form of FASTQ files. A QC sequencing run
+was used to produce a small number of reads. The input for this project should be a folder indicating where the 
+FASTQ files representing the run are located. 
 
+For initial testing purposes, I defined this folder as: 
 
+`../AiptasiaReads`
+
+Within this folder, there were 50 FASTQ Files, representing 24 different organisms each with a forward strand and
+reverse strand (R1 and R2). A similar setup is advised when running this project.
+
+The steps to running this project are as follows:
+1. Quality trim the reads using Trimmomatic [1].
+2. We will then use one of the aligners.
+3. 
 
 ### References
-1. Jeffrey A. Martin and Zhong Wang. "Next-generation transcriptome assembly." Nature Reviews Genetics (Walnut Creek, CA) 12 (2011): 671-683. Web.
+1. Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. "Trimmomatic: A Flexible Trimmer for Illumina Sequence Data." Bioinformatics 30.15 (2014): 2114-120. Web.
 2. Giacomo Baruzzo, Katharina E Hayer, Eun Ji Kim, Barbara Di Camillo, Garret A FitzGerald, and Gregory R Grant. "Simulation-based comprehensive benchmarking of RNA-seq aligners." Nature Methods (Padua, Italy) 14 (2017): 135-139. Web.
+3. Jeffrey A. Martin and Zhong Wang. "Next-generation transcriptome assembly." Nature Reviews Genetics (Walnut Creek, CA) 12 (2011): 671-683. Web.
