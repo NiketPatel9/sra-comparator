@@ -22,6 +22,9 @@ The steps to running this project are as follows:
 2. We will then use one of the aligners.
 3. 
 
+TRIMMOATIC LINK http://www.usadellab.org/cms/?page=trimmomatic
+
+
 ### References
 1. Bolger, Anthony M., Marc Lohse, and Bjoern Usadel. "Trimmomatic: A Flexible Trimmer for Illumina Sequence Data." Bioinformatics 30.15 (2014): 2114-120. Web.
 2. Giacomo Baruzzo, Katharina E Hayer, Eun Ji Kim, Barbara Di Camillo, Garret A FitzGerald, and Gregory R Grant. "Simulation-based comprehensive benchmarking of RNA-seq aligners." Nature Methods (Padua, Italy) 14 (2017): 135-139. Web.
