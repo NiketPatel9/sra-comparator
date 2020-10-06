@@ -3,10 +3,11 @@
 ## Niket Patel
 
 ## Methods
-This project will explore various splice-aware short-read alginers as described by Martin and Wang [3]. The aligners are Blat, TopHat, GSNAP, SpliceMap,
-and MapSplice. Because we are comparing aligners, a reference-based strategy will be taken towards transcriptome assembly. 
+This project will explore various splice-aware short-read alginers as described by Martin and Wang [3]. The aligners are STAR, TopHat, GSNAP, SpliceMap,
+and MapSplice. Because we are comparing aligners, a reference-based strategy will be taken towards transcriptome assembly. These
+five aligners output either BAM or SAM format, making them ideal for comparison.
 
-Testing of this project involved usage of the Aiptasia pallida reads in the form of FASTQ files. A QC sequencing run
+Testing of this project involved usage of the *Aiptasia pallida* reads in the form of FASTQ files. A QC sequencing run
 was used to produce a small number of reads. The input for this project should be a folder indicating where the 
 FASTQ files representing the run are located. 
 
@@ -17,12 +18,33 @@ For initial testing purposes, I defined this folder as:
 Within this folder, there were 50 FASTQ Files, representing 24 different organisms each with a forward strand and
 reverse strand (R1 and R2). A similar setup is advised when running this project.
 
-The steps to running this project are as follows:
-1. Quality trim the reads using Trimmomatic [1].
-2. We will then use one of the aligners.
-3. 
+Make sure that Trimmomatic [1] is downloaded in a folder adjacent to `../AiptasiaReads` in `../Trimmomatic-0.39`. Trimmomatic
+can be downloaded with the following link:
 
-TRIMMOATIC LINK http://www.usadellab.org/cms/?page=trimmomatic
+http://www.usadellab.org/cms/?page=trimmomatic
+
+Download the binary version under "Downloading Trimmomatic" (version 0.39 works with this project).
+
+In short your folder structure should look like this:
+
+```
+..    
+│
+└───AiptasiaReads (or any other directory of FASTQ files)
+│   │   Aip02.R1.fastq
+|   |   Aip02.R2.fastq
+│   │   Aip05.R1.fastq
+│   
+└───Trimmomatic-0.39
+|   |   LICENCSE
+|   |   trimmomatic-0.39.jar
+|   |
+|   └─── adapters
+|
+└───sra-comparator (this directory)
+    │   (you are here)
+```
+
 
 
 ### References
