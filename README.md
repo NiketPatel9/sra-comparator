@@ -25,7 +25,7 @@ http://www.usadellab.org/cms/?page=trimmomatic
 
 Download the binary version under "Downloading Trimmomatic" (version 0.39 works with this project).
 
-In short your folder structure should look like this:
+In short, your folder structure should look like this:
 
 ```
 ..    
