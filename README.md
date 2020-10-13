@@ -34,7 +34,8 @@ In short, your folder structure should look like this:
 │   │   Aip02.R1.fastq
 |   |   Aip02.R2.fastq
 │   │   Aip05.R1.fastq
-│   
+│   |   ...
+
 └───Trimmomatic-0.39
 |   |   LICENCSE
 |   |   trimmomatic-0.39.jar
