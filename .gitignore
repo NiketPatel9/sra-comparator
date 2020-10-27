@@ -3,3 +3,4 @@
 !*.pl
 !*.py
 !.gitignore
+GenomeIndices/

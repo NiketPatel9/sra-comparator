@@ -3,9 +3,11 @@
 ## Niket Patel
 
 ## Methods
-This project will explore various splice-aware short-read alginers as described by Martin and Wang [3]. The aligners are STAR, TopHat, GSNAP, SpliceMap,
+This project will explore various splice-aware short-read aligners as described by Martin and Wang [3]. The aligners are STAR, TopHat, GSNAP, SpliceMap,
 and MapSplice. Because we are comparing aligners, a reference-based strategy will be taken towards transcriptome assembly. These
-five aligners output either BAM or SAM format, making them ideal for comparison.
+five aligners output either BAM or SAM format, making them ideal for comparison. This project takes place in a Linux 
+environment using 8 Cores on an i7 processor. Please consider the size of the genome you are using before running the 
+scripts in this repository.
 
 ### Sample Data
 Testing of this project involved usage of the *Aiptasia pallida* reads in the form of FASTQ files. A QC sequencing run
@@ -50,6 +52,7 @@ In short, your folder structure should look like this:
 │   │   Aip05.R1.fastq
 │   |   ...
 |   |   GCA_001417965.1_Aiptasia_genome_1.1_genomic.fna (Aiptasia Genome)
+|   |   GCA_001417965.1_Aiptasia_genome_1.1_genomic.gff (Genome Anntotation File)
 |
 └───Trimmomatic-0.39
 |   |   LICENCSE
