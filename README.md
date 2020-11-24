@@ -40,6 +40,13 @@ Installation and setup instructions are here and should be followed prior to run
 
 The source repository is here: https://github.com/alexdobin/STAR
  
+### Samtools Sorting
+The samtools utility will be used to convert SAM files from the alignment step to the BAM format, which is ideal for 
+transcriptome assembly using Trinity. Run the following commands to install samtools:
+```
+sudo apt-get update
+sudo apt-get install samtools
+```
 
 In short, your folder structure should look like this:
 
