@@ -42,11 +42,51 @@ The source repository is here: https://github.com/alexdobin/STAR
  
 ### Samtools Sorting
 The samtools utility will be used to convert SAM files from the alignment step to the BAM format, which is ideal for 
-transcriptome assembly using Trinity. Run the following commands to install samtools:
+transcriptome assembly using Trinity. In order to install the latest version of samtools: install from the 
+following link: http://www.htslib.org/download/ (Version 1.11) was used for this project. Make sure that the samtools
+directory is adjacent the project directory, as shown in the directory structure below. In order to configure samtools,
+run the following commands:
 ```
 sudo apt-get update
-sudo apt-get install samtools
+cd samtools-1.11
+./configure --prefix=/usr
+make
+sudo make install
+samtools --version
 ```
+
+### Trinity Transcriptome Assembly
+The aligners will be tested by comparing the results of using their alignment to assemble transcriptomes. In order to
+assemble the transcriptome from the bam file produced by samtools, Trinity will be used. Trinity has the ability
+to perform a transcriptome assembly and then run statistics on that assembly in order to glean helpful numbers like the
+N50 statistic.
+
+#### Trinity
+Trinity can be downloaded from here https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+This project is using version 2.11.0. The tar.gz file should be unzipped and then placed in the appropriate location.
+Also, the Jellyfish package should be installed similarly to samtools above via the following link:
+https://github.com/gmarcais/Jellyfish/releases (Version 2.3.0 is used for this project)
+
+#### Jellyfish
+Trinity requires Jellyfish in order to run, and the following commands should be run after Jellyfish has been downloaded 
+to the proper location:
+```
+sudo apt-get update
+cd jellyfish-2.3.0
+./configure --prefix=$HOME
+make
+sudo make install
+sudo ldconfig
+```
+
+#### Bowtie
+Trinity requires Bowtie2 in order to run, and the following commands should be run to install it:
+```
+sudo apt update
+sudo apt install bowtie2
+```
+
 
 In short, your folder structure should look like this:
 
@@ -71,10 +111,23 @@ In short, your folder structure should look like this:
 |   |  
 |   └─── bin
 |
+└───samtools-1.11
+|   |   configure
+|
+└───jellyfish-2.3.0
+|   |   configure
+|
+|___trinityrnaseq-v2.11.0
+|   |
+|   |   Trinity
+|   |
+|   └─── util
+|        |
+|        |  TrinityStats.pl
+|
 └───sra-comparator (this directory)
     │   (you are here)
 ```
-
 
 
 ### References
