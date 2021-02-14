@@ -40,4 +40,4 @@ function trimReads {
 
     done
 }
-trimReads 1>trim.log 2>trim.err &
+trimReads  &

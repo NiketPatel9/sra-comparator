@@ -21,7 +21,7 @@ for file in $outputBam*$bamExtension
 do
   pathRemoved="${file/$outputBam/}"
   sampleName="${pathRemoved/$bamExtension/}"
-  samtools sort $file ${outputSorted}${sampleName}.sorted
+  samtools sort $file -o ${outputSorted}${sampleName}.sorted.bam
 done
 
 

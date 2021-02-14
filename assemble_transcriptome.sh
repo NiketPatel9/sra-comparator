@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # assemble_transcriptome.sh
 
-../trinityrnaseq-v2.11.0/Trinity --genome_guided_bam sortedBam/AipAll.bam --no_salmon \
---genome_guided_max_intron 10000  --max_memory 20G --CPU 4
+nice -n19 /usr/local/programs/trinityrnaseq-Trinity-v2.8.4/Trinity \
+--genome_guided_bam sortedBam/AipAll.bam \
+--genome_guided_max_intron 10000 \
+--max_memory 10G --CPU 4 \
+&
