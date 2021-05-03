@@ -39,6 +39,14 @@ seed searching followed by clustering, stitching, and scoring [2].
 Installation and setup instructions are here and should be followed prior to running this project: https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf
 
 The source repository is here: https://github.com/alexdobin/STAR
+
+#### TopHat
+TopHat is an aligner that does not rely on known splice sites and is commonly used as part of the Tuxedo pipeline. It uses a fellow member of the pipeline,
+Bowtie, to assist it in alignment. TopHat identifies possible splice junctions based on the reference genome [5]. To achieve ideal alignment, TopHat
+splits all input reads into smaller segments, which are then mapped independently [5]. These segments are put together at the end of the program for final
+end-to-end alignments. For more information on TopHat as well as its manual for running, click here: https://ccb.jhu.edu/software/tophat/manual.shtml
+
+
  
 ### Samtools Sorting
 The samtools utility will be used to convert SAM files from the alignment step to the BAM format, which is ideal for 
@@ -135,3 +143,4 @@ In short, your folder structure should look like this:
 2. Dobin, A., Davis, C. A., Schlesinger, F., Drenkow, J., Zaleski, C., Jha, S., Batut, P., Chaisson, M., & Gingeras, T. R. "STAR: ultrafast universal RNA-seq aligner." Bioinformatics (Oxford, England), 29(1), (2013). 15–21. Web.
 3. Giacomo Baruzzo, Katharina E Hayer, Eun Ji Kim, Barbara Di Camillo, Garret A FitzGerald, and Gregory R Grant. "Simulation-based comprehensive benchmarking of RNA-seq aligners." Nature Methods (Padua, Italy) 14 (2017): 135-139. Web.
 4. Jeffrey A. Martin and Zhong Wang. "Next-generation transcriptome assembly." Nature Reviews Genetics (Walnut Creek, CA) 12 (2011): 671-683. Web.
+5. Trapnell, C., Patcher, L., Salzberg S. L. "TopHat: discovering splice junctions with RNA-Seq." Bioinformatics (Oxford, England), 25 (9), (2009). 1105-1111. Web.
