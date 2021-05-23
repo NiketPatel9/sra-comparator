@@ -46,22 +46,8 @@ Bowtie, to assist it in alignment. TopHat identifies possible splice junctions b
 splits all input reads into smaller segments, which are then mapped independently [5]. These segments are put together at the end of the program for final
 end-to-end alignments. For more information on TopHat as well as its manual for running, click here: https://ccb.jhu.edu/software/tophat/manual.shtml
 
-In order to install TopHat, download tophat-2.1.1.tar.gz from the following link: https://ccb.jhu.edu/software/tophat/downloads/
-
-Note, you will also need to install Boost after downloading the boost_1_76_0.tar.gz file from the following link, and placing it
-in the same directory as the tophat-2.1.1.tar.gz file: https://www.boost.org/users/download/
-
-Then, unzip the tar.gz file in the appropriate location according to the directory tree below. Navigate to the folder containing
-the tar.gz file, which should be in the same directory as the sra-comparator project, and then run the following commmands:
-```
-tar xvfz boost_1_76_0.tar.gz
-cd boost_1_76_0
-./bootstrap.sh
-./b2 link=static runtime-link=static stage install
-cd ..
-tar zxvf tophat-2.1.1.tar.gz
-
-```
+In order to install TopHat, follow the instructions given here: https://bioinformaticsreview.com/20210310/installing-tophat2-on-ubuntu/,
+making sure that the directory structure matches what is shown below.
  
 ### Samtools Sorting
 The samtools utility will be used to convert SAM files from the alignment step to the BAM format, which is ideal for 
@@ -134,7 +120,7 @@ In short, your folder structure should look like this:
 |   |  
 |   └─── bin
 |
-└───tophat-2.1.1
+└───tophat-2.1.1.Linux_x86_64
 |
 └───samtools-1.11
 |   |   configure
